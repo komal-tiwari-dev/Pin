@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Pin from './Components/Pin';
 
 function App() {
+  const [pin, setPin] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Pin length={4} setPin={setPin}></Pin>
+      <h3>PIN: {pin}</h3>
     </div>
   );
 }
